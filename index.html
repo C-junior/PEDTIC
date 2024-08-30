@@ -42,6 +42,7 @@
         </nav>
     </header>
     <main>
+        <button id="back-to-top" style="display: none;">🔝 Voltar ao Topo</button>
         <section id="hero">
             <img class="resizeble_img" src="Assets/img/hero-image.png" alt="">
         </section>
@@ -1110,6 +1111,21 @@ documentos anexos a este PEDTIC.
         </section>
 
     </main>
+    <script>
+        const backToTopButton = document.getElementById('back-to-top');
+    
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    
+        backToTopButton.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
 
 </body>
 </html>
